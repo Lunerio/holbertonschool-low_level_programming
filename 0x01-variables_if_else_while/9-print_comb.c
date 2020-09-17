@@ -7,12 +7,17 @@
  */
 int main(void)
 {
-	int n;
+	int n = 48;
 
-	while (ch <= 'z')
+	while (n <= 57)
 	{
-		putchar(ch);
-		ch++;
+		putchar(n);
+		n++;
+		if (n <= 57)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 	putchar('\n');
 
