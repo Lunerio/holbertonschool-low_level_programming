@@ -29,18 +29,17 @@ void jack_bauer(void)
 					}
 					else
 					{
-						if (b < '4')
-						{
-							_putchar(a);
-							_putchar(b);
-							_putchar(':');
-							_putchar(c);
-							_putchar(d);
-							_putchar('\n');
-						}
+					if (b < '4')
+					{
+					_putchar(a);
+					_putchar(b);
+					_putchar(':');
+					_putchar(c);
+					_putchar(d);
+					_putchar('\n');
 					}
-
-				 }
+					}
+				}
 			}
 		}
 	}
