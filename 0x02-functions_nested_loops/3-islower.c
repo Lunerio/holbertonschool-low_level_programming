@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * _islower - check the code for Holberton School students.
+ * @c: to be declared
  * Return: Always 0.
  */
 

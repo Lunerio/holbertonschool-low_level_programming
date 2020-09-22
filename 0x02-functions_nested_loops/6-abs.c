@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * _abs - check the code for Holberton School students.
+ * @n: to be declared
  * Return: Always 0.
  */
 int _abs(int n)
