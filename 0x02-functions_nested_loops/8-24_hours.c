@@ -1,15 +1,10 @@
-B#include "holberton.h"
+#include "holberton.h"
 
 /**
  * jack_bauer - check the code for Holberton School students.
  * @a @b @c @d: to be declared
  * Return: Always 0.
  */
-int main(void)
-{
-	jack_bauer();
-	return (0);
-}
 
 void jack_bauer(void)
 {
@@ -23,14 +18,28 @@ void jack_bauer(void)
 			{
 				for (d = '0'; d <= '9'; d++)
 				{
-					if (a == '2' && b == '3' && c == '5' && d == '9')
-						break;
+					if (a < '2')
+					{
 					_putchar(a);
 					_putchar(b);
 					_putchar(':');
 					_putchar(c);
 					_putchar(d);
 					_putchar('\n');
+					}
+					else
+					{
+						if (b < '4')
+						{
+							_putchar(a);
+							_putchar(b);
+							_putchar(':');
+							_putchar(c);
+							_putchar(d);
+							_putchar('\n');
+						}
+					}
+
 				 }
 			}
 		}
