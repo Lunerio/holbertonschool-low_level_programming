@@ -1,7 +1,9 @@
 #include "holberton.h"
 /**
  * add - check the code for Holberton School students.
- * @a @b @c: to be declared
+ * @a: to be declared
+ * @b: to be declared
+ *
  * Return: Always 0.
  */
 
