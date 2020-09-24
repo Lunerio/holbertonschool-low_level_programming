@@ -5,14 +5,6 @@
  * @n: to be declared
  * Return: Always 0.
  */
-int main(void)
-{
-	print_diagonal(0);
-	print_diagonal(2);
-	print_diagonal(10);
-	print_diagonal(-4);
-	return (0);
-}
 
 void print_diagonal(int n)
 {
@@ -20,7 +12,7 @@ void print_diagonal(int n)
 	int i;
 	int j;
 
-	if (n <=0 )
+	if (n <= 0)
 	{
 		_putchar('\n');
 	}
