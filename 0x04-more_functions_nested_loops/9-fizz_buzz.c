@@ -4,8 +4,10 @@ int main(void)
 {
 	int i;
 
-	for (i = 1; i <= 100; i++)
+	i = 0;
+	while (i < 100)
 	{
+		i++;
 		if (i % 3 == 0)
 		{
 			printf("Fizz ");
