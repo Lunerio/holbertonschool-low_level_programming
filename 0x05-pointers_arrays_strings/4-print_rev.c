@@ -1,18 +1,10 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * print_rev - check the code for Holberton School students.
+ * @s: pointer to s
  * Return: Always 0.
  */
-int main(void)
-{
-	char *str;
-
-	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	print_rev(str);
-	return (0);
-}
 
 void print_rev(char *s)
 {
