@@ -26,14 +26,5 @@ void print_triangle(int size)
 	}
 	else
 	{
-		for (lin = 1; lin <= size; lin ++)
-		{
-			for(esp = lin - 1; esp < lin; esp++)
-			{
-				_putchar(' ');
-			}
-			_putchar('#');
-			_putchar('\n');
-		}
-	}
+
 }
