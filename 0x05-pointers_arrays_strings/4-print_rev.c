@@ -14,9 +14,9 @@ void print_rev(char *s)
 	{
 		index++;
 	}
-	while (index >0)
+	while (index > 0)
 	{
-		_putchar(s[index]);
+		_putchar(s[index - 1]);
 		index--;
 	}
 	_putchar('\n');
