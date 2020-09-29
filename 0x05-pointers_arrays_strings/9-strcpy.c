@@ -30,8 +30,7 @@ char *_strcpy(char *dest, char *src)
 
 	for (cuenta = 0; cuenta <= index; cuenta++)
 	{
-		*dest = *src;
-		;
+		dest[cuenta] = src[cuenta];
 	}
 	return (dest);
 }
