@@ -2,7 +2,7 @@
 
 /**
  * puts2 - check the code for Holberton School students.
- * @str: 
+ * @str: pointer to str
  * Return: Always 0.
  */
 
