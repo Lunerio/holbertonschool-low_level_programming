@@ -2,19 +2,10 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * rev_string - check the code for Holberton School students.
+ * @s: pointer to s
  * Return: Always 0.
  */
-int main(void)
-{
-	char s[10] = "Holberton";
-
-	printf("%s\n", s);
-	rev_string(s);
-	printf("%s\n", s);
-	return (0);
-}
 
 void rev_string(char *s)
 {
@@ -34,7 +25,7 @@ void rev_string(char *s)
 
 	for (c = 0; c < (index - 1); c++)
 	{
-		max ++;
+		max++;
 }
 	for (c = 0; c < index / 2; c++)
 	{
