@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * _puts - check the code for Holberton School students.
  * @str: Pointer to str
  * Return: Always 0.
  */
