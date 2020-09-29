@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * puts_half - check the code for Holberton School students.
  * @str: point to str
  * Return: Always 0.
  */
