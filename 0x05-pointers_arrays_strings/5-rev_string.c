@@ -32,10 +32,10 @@ void rev_string(char *s)
 	min = s;
 	max = s;
 
-	for (c = 0; c < (index -1); c++)
+	for (c = 0; c < (index - 1); c++)
 	{
 		max ++;
-	}
+}
 	for (c = 0; c < index / 2; c++)
 	{
 		save = *max;
