@@ -10,13 +10,13 @@ void print_rev(char *s)
 {
 	int index = 0;
 
-	while (str[index] != '\0')
+	while (s[index] != '\0')
 	{
 		index++;
 	}
-	while (index >=0)
+	while (index >0)
 	{
-		_putchar(str[index]);
+		_putchar(s[index]);
 		index--;
 	}
 	_putchar('\n');
