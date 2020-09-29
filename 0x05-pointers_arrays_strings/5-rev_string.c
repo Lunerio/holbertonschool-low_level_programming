@@ -18,21 +18,30 @@ int main(void)
 
 void rev_string(char *s)
 {
-	int min;
-	int max;
+	int index = 0;
+	int c;
+	char *min;
+	char *max;
+	char save;
 
-	min = 0;
-	max = 0;
-
-	while (s[max] != '\0')
+	while (s[index] != '\0')
 	{
-		max++;
+		index++;
 	}
 
-	while ((min != '\0') && (max < 0))
+	min = s;
+	max = s;
+
+	for (c = 0; c < (index -1); c++)
 	{
+		max ++;
+	}
+	for (c = 0; c < index / 2; c++)
+	{
+		save = *max;
+		*max = *min;
+		*min = save;
 		min++;
 		max--;
 	}
-	_putchar('\n');
 }
