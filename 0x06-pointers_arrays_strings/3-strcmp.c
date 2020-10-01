@@ -2,37 +2,27 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * _strcmp - check the code for Holberton School students.
+ * @s1: pointer to s1
+ * @s2: pointer to s2
  * Return: Always 0.
  */
-int main(void)
-{
-	char s1[] = "Hello";
-	char s2[] = "World!";
-
-	printf("%d\n", _strcmp(s1, s2));
-	printf("%d\n", _strcmp(s2, s1));
-	printf("%d\n", _strcmp(s1, s1));
-	return (0);
-}
 
 int _strcmp(char *s1, char *s2)
 {
 	int index;
+	int ch1;
+	int ch2;
 
 	for (index = 0; (s1[index] != '\0') && (s2[index] != '\0'); index++)
 	{
-		if (s1[index] > s2[index])
+		ch1 = s1[index];
+		ch2 = s2[index];
+
+		if (ch1 != ch2)
 		{
 			break;
-			return (s1[index] - s2[index]);
-		}
-		else if (s2[index] > s1[index])
-		{
-			break;
-			return (s2[index] - s1[index]);
 		}
 	}
-	return (0);
+	return (ch1 - ch2);
 }
