@@ -19,7 +19,7 @@ char *_strncpy(char *dest, char *src, int n)
 		index++;
 	}
 
-	for (count = 0; count <= index; count++)
+	for (count = 0; count < index; count++)
 	{
 		if (count == n)
 		{
