@@ -22,10 +22,6 @@ char *leet(char *s)
 			{
 				s[i] = b[j];
 			}
-			else
-			{
-				continue;
-			}
 		}
 	}
 	return (s);
