@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	}
-	if (i < s)
+	if (i != '\0')
 	{
 		return (s);
 	}
