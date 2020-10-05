@@ -20,9 +20,9 @@ char *_strchr(char *s, char c)
 			break;
 		}
 	}
-	if (i != 0)
+	if (i < s)
 	{
-		return (c);
+		return (s);
 	}
 	else
 	{
