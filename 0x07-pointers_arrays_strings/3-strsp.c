@@ -2,20 +2,11 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * strspn - check the code for Holberton School students.
+ * @s: pointer to string
+ * @accept: pointer to string
  * Return: Always 0.
  */
-int main(void)
-{
-	char *s = "hello, world";
-	char *f = "oleh";
-	unsigned int n;
-
-	n = _strspn(s, f);
-	printf("%u\n", n);
-	return (0);
-}
 
 unsigned int _strspn(char *s, char *accept)
 {
