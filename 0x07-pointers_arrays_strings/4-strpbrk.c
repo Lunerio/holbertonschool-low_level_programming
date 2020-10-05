@@ -2,8 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * _strpbrk - check the code for Holberton School students.
+ * @s: pointer to s
+ * @accept: pointer to accept
  * Return: Always 0.
  */
 int main(void)
