@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * strspn - check the code for Holberton School students.
+ * _strspn - check the code for Holberton School students.
  * @s: pointer to string
  * @accept: pointer to string
  * Return: Always 0.
@@ -21,7 +21,6 @@ unsigned int _strspn(char *s, char *accept)
 			if (s[i] == accept[j])
 			{
 				k++;
-				break;
 			}
 		}
 	}
