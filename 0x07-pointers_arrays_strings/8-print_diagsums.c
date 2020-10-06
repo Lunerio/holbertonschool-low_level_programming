@@ -27,7 +27,7 @@ void print_diagsums(int *a, int size)
 	index = (size - 1);
 	res2 = a[index];
 
-	for (; i > 0; i--)
+	for (i = 2; i >= 0; i--)
 	{
 		sig2 = (index + size) - 1;
 		res2 = res2 + a[sig2];
