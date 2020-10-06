@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * pprint_diagsums - check the code for Holberton School students.
+ * print_diagsums - check the code for Holberton School students.
  * @a: something
  * @size: something
  * Return: Always 0.
@@ -27,7 +27,7 @@ void print_diagsums(int *a, int size)
 	index = (size - 1);
 	res2 = a[index];
 
-	for (i = 0; i < size - 1; i++)
+	for (; i > 0; i--)
 	{
 		sig2 = (index + size) - 1;
 		res2 = res2 + a[sig2];
