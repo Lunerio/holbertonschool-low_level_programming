@@ -16,8 +16,7 @@ void print_diagsums(int *a, int size)
 	int res2;
 	int sig;
 	int sig2;
-	int count = 1;
-
+	
 	for (i = 0; i < (size - 1); i++)
 	{
 		sig = index + (size + 1);
@@ -30,8 +29,7 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size - 1; i++)
 	{
-		sig2 = (index + size) - count;
-		count++;
+		sig2 = (index + size) - 1;
 		res2 = res2 + a[sig2];
 		index = sig2;
 	}
