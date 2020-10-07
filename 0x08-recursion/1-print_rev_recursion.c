@@ -2,7 +2,7 @@
 
 /**
  * _print_rev_recursion - check the code for Holberton School students.
- * @s_ pointer to string
+ * @s: pointer to string
  * Return: Always 0.
  */
 
