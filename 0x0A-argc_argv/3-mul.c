@@ -1,6 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * main - tests function that prints if integer is positive or negative
+ * @argc: argument counter
+ * @argv: arguemtn array
+ * Return: 0
+ */
+
 int main(int argc, char *argv[])
 {
 	int mul;
