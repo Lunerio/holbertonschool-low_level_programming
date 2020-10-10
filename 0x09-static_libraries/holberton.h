@@ -1,3 +1,6 @@
+#ifndef holberton_h
+#define holberton_h
+#endif
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
