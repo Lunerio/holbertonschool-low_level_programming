@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
 		c = *argv[i];
 		if (isdigit(c) == 0)
 		{
-			printf("Error\n");
+			printf("Error");
+			printf("\n");
 			return (1);
 		}
 		sum = sum + atoi(argv[i]);
