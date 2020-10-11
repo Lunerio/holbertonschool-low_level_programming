@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 /**
  * main - tests function that prints if integer is positive or negative
@@ -11,7 +12,8 @@
 int main(int argc, char *argv[])
 {
 	int i;
-	int sum;
+	int sum = 0;
+	char c;
 
 	if (argc < 1)
 	{
@@ -19,9 +21,10 @@ int main(int argc, char *argv[])
 	}
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) == 0)
+		c = *argv[i];
+		if (isdigit(c) == 0)
 		{
-			printf("Error\n");
+			printf("Error");
 			return (1);
 		}
 		sum = sum + atoi(argv[i]);
