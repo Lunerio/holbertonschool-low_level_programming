@@ -1,5 +1,13 @@
 #include <unistd.h>
 
+/**
+ * main - executing commands
+ * _potchar - print each char
+ * pront - loop for each char
+ * @c: variable for char
+ * Return: returns 1
+ */
+
 int _potchar(char c);
 void pront(char *c);
 
