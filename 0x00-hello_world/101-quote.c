@@ -2,8 +2,6 @@
 
 /**
  * main - executing commands
- * _potchar - print each char
- * pront - loop for each char
  * @c: variable for char
  * Return: returns 1
  */
@@ -21,10 +19,22 @@ int main(void)
 	return (1);
 }
 
+/**
+ * _potchar - print char
+ * Return: returns value
+ * @c: char
+ */
+
 int _potchar(char c)
 {
 	return (write(1, &c, 1));
 }
+
+/**
+ * pront - loop for each char
+ * @c: char
+ * Return: void
+ */
 
 void pront(char *c)
 {
