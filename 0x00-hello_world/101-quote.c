@@ -1,12 +1,29 @@
-#include <stdio.h>
+#include <unistd.h>
 
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+int _potchar(char c);
+void pront(char *c);
+
 int main(void)
 {
-	printf(stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	char c[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+
+	pront(c);
+	_potchar('\n');
+
 	return (1);
+}
+
+int _potchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
+void pront(char *c)
+{
+	int i;
+
+	for (i = 0; c[i] != '\0'; i++)
+	{
+		_potchar(c[i]);
+	}
 }
