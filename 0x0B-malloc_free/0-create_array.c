@@ -1,6 +1,14 @@
 #include "holberton.h"
 #include <stdlib.h>
 
+/**
+ *create_array - function that prints array
+ * @size: argument
+ * @c: argument
+ * Return: the malloc pointer
+ *
+ */
+
 char *create_array(unsigned int size, char c)
 {
 	char *ch;
