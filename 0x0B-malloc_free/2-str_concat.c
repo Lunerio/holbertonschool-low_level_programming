@@ -1,5 +1,11 @@
 #include "holberton.h"
 #include <stdlib.h>
+/**
+ * str_concat - return the concatenation
+ * @s1: pointer to char
+ * @s2: pointer to char
+ * Return: pointer to nstr
+ */
 
 char *str_concat(char *s1, char *s2)
 {
@@ -25,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 		i1++;
 	}
 
-	nstr = malloc (i1 * sizeof(char) + 1);
+	nstr = malloc(i1 * sizeof(char) + 1);
 
 	if (nstr == NULL)
 	{
