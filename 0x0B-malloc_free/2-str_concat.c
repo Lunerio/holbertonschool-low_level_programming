@@ -5,33 +5,41 @@ char *str_concat(char *s1, char *s2)
 {
 	unsigned int i1;
 	unsigned int i2;
-	unsigned int i3;
 	char *nstr;
+
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
 
 	for (i1 = 0; s1[i1] != 0; i1++)
 	{
 	}
+
 	for (i2 = 0; s2[i2] != 0; i2++)
 	{
 		i1++;
 	}
 
-	nstr = malloc (i1 * sizeof(char));
+	nstr = malloc (i1 * sizeof(char) + 1);
+
 	if (nstr == NULL)
 	{
 		return (NULL);
 	}
-	if (i1 == 0)
-	{
-		return (NULL);
-	}
 
-	for (i3 = 0; s2[i2] != 0; i3++)
+	for (i1 = 0; s1[i1] != 0; i1++)
 	{
-		s1[i1] = s2[i2];
-		nstr[i3] = s1[i1];
+		nstr[i1] = s1[i1];
+	}
+	for (i2 = 0; s2[i2] != 0; i2++)
+	{
+		nstr[i1] = s2[i2];
 		i1++;
-		i2++;
 	}
 	return (nstr);
 }
