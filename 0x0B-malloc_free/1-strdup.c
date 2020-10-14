@@ -1,11 +1,17 @@
 #include "holberton.h"
 #include <stdlib.h>
 
+/**
+ * _strdup - duplicate string
+ * @str: pointer to str
+ *Return: return pointer to malloc
+ */
+
 char *_strdup(char *str)
 {
-	unsigned int size = 0;
-	unsigned int i;
 	char *s;
+	int i;
+	int size = 0;
 
 	for (i = 0; str[i] != 0; i++)
 	{
@@ -14,17 +20,16 @@ char *_strdup(char *str)
 
 	s = malloc(size * sizeof(char));
 
-	if (s == NULL)
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	if (s == 0)
 	{
 		return (NULL);
 	}
 
-	if (size == 0)
-	{
-		return (NULL);
-	}
-
-	for (i = 0; i < size; i++)
+	for (i = 0; i <= size; i++)
 	{
 		s[i] = str[i];
 	}
