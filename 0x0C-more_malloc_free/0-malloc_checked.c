@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * malloc_checked
+ * malloc_checked - returns the point in memory
  * @b: limit
  * Return: x
  */
