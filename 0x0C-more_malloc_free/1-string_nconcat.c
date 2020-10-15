@@ -7,7 +7,6 @@
  * @n: limit
  * Return: pointer to nstr
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i1;
@@ -22,27 +21,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s2 = "";
 	}
-
 	for (i1 = 0; s1[i1] != 0; i1++)
 	{
 	}
-
 	for (i2 = 0; s2[i2] != 0; i2++)
 	{
-		if (i2 == n)
-		{
-			break;
-		}
-		i1++;
 	}
-
-	nstr = malloc(i1 * sizeof(char));
-
+	if (n >= i2)
+	{
+		nstr = malloc((i1 + i2) * sizeof(char) + 1);
+	}
+	else
+	{
+		nstr = malloc((i1 + n) * sizeof(char) + 1);
+	}
 	if (nstr == NULL)
 	{
 		return (NULL);
 	}
-
 	for (i1 = 0; s1[i1] != 0; i1++)
 	{
 		nstr[i1] = s1[i1];
