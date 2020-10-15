@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * array_range
+ * array_range - create array
  * @min: min number
  * @max: max number
  * Return: pointer to h
@@ -25,7 +25,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	}
 
-	for (i = 0; h[i] <= max; i++)
+	for (i = 0; h[i] <= size; i++)
 	{
 		h[i] = min;
 		min++;
