@@ -2,6 +2,11 @@
 #include <stdio.h>
 #include "dog.h"
 
+/**
+ * print_dog - print the data from the struct
+ * @d: pointer
+ */
+
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
@@ -18,7 +23,7 @@ void print_dog(struct dog *d)
 		printf("Name: %s\n", (*d).name);
 	}
 
-	if ((*d).age == 0)
+	if ((*d).age < 0)
 	{
 		printf("Age: (nil)\n");
 	}
