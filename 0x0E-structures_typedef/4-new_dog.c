@@ -1,6 +1,42 @@
 #include "dog.h"
 #include <stdlib.h>
-#include <string.h>
+
+/**
+ * _strdup - duplicate string
+ * @str: pointer to str
+ *Return: return pointer to malloc
+ */
+
+char *_strdup(char *str)
+{
+	char *s;
+	int i;
+	int size = 0;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; str[i] != 0; i++)
+	{
+		size++;
+	}
+
+	s = malloc(size * sizeof(char) + 1);
+
+	if (s == NULL)
+	{
+		return (NULL);
+	}
+
+	for (i = 0; i <= size; i++)
+	{
+		s[i] = str[i];
+	}
+
+	return (s);
+}
 
 /**
  * new_dog - add information to struct
@@ -28,16 +64,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	namecp = strdup(name);
+	namecp = _strdup(name);
 	if (namecp == NULL)
 	{
+		free(namecp);
 		free(new_dog);
 		return (NULL);
 	}
 
-	ownercp = strdup(owner);
+	ownercp = _strdup(owner);
 	if (ownercp == NULL)
 	{
+		free(namecp);
+		free(ownercp);
 		free(new_dog);
 		return (NULL);
 	}
