@@ -2,12 +2,19 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * new_dog - add information to struct
+ * @name: pointer to char
+ * @age: float
+ * @owner: pointer to char
+ * Return: normal
+ */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
 	char *namecp;
 	char *ownercp;
-	(void)age;
 
 	if (name == NULL || owner == NULL)
 	{
@@ -15,7 +22,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	new_dog = malloc(sizeof(dog_t));
-	if(new_dog == NULL)
+	if (new_dog == NULL)
 	{
 		free(new_dog);
 		return (NULL);
