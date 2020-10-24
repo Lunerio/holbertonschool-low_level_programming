@@ -13,54 +13,35 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list hchar;
-	va_list cp;
-	char test;
+	char *test;
 
-	if (n != 0)
+	if (n == 0)
 	{
-		va_start(hchar, n);
+		printf("\n");
+	}
+
+	va_start(hchar, n);
+	for (i = 0; i < (n - 1); i++)
+	{
+		test = va_arg(hchar, char *);
+		if (test == NULL)
+		{
+			test = "(nil)";
+		}
 		if (separator != NULL)
 		{
-			for (i = 0; i < n; i++)
-			{
-				va_copy(cp, hchar);
-				test = va_arg(cp, int);
-				if (test == 0)
-				{
-					printf("(nil)");
-				}
-				else
-				{
-					printf("%s", va_arg(hchar, char *));
-					if (i < (n - 1))
-					{
-						printf("%s", separator);
-					}
-				}
-			}
+			printf("%s%s", test, separator);
 		}
 		else
 		{
-			for (i = 0; i < n; i++)
-			{
-				va_copy(cp, hchar);
-				test = va_arg(cp, int);
-				if (test == 0)
-				{
-					printf("(nil)");
-				}
-				else
-				{
-					printf("%s", va_arg(hchar, char *));
-					if (i < (n - 1))
-					{
-					printf("%s", separator);
-					}
-				}
-			}
-}
+			printf("%s", test);
+		}
 	}
+	test = va_arg(hchar, char *);
+	if (test == NULL)
+	{
+		test = "(nil)";
+	}
+	printf("%s\n", test);
 	va_end(hchar);
-
-	printf("\n");
 }
