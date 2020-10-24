@@ -42,21 +42,23 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 		{
 			for (i = 0; i < n; i++)
-				va_copy(cp, int);
-			test = va_arg(cp, int);
-			if (test == 0)
 			{
-				printf("(nil)");
-			}
-			else
-			{
-				printf("%s", va_arg(hchar, char *));
-				if (i < (n - 1))
+				va_copy(cp, hchar);
+				test = va_arg(cp, int);
+				if (test == 0)
 				{
+					printf("(nil)");
+				}
+				else
+				{
+					printf("%s", va_arg(hchar, char *));
+					if (i < (n - 1))
+					{
 					printf("%s", separator);
+					}
 				}
 			}
-		}
+}
 	}
 	va_end(hchar);
 
