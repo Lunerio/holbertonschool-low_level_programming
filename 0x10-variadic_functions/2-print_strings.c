@@ -3,6 +3,12 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 
+/**
+ * print_strings - print given string in arguments
+ * @separator: char for separator between strings
+ * @n: number of arguments given
+ */
+
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
@@ -10,31 +16,27 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_list cp;
 	char test;
 
-	if (n == 0)
+	if (n != 0)
 	{
-		return;
-	}
-
-
-	if (separator != NULL)
-	{
-		va_start(hchar, n);
-		for (i = 0; i < n; i++)
+		if (separator != NULL)
 		{
-			va_copy(cp, hchar);
-			test = va_arg(cp, int);
-			if (test == 0)
+			va_start(hchar, n);
+			for (i = 0; i < n; i++)
 			{
-				printf("(nil)");
-			}
-			else
-			{
-				printf("%s", va_arg(hchar, char *));
-				if (i < (n - 1))
+				va_copy(cp, hchar);
+				test = va_arg(cp, int);
+				if (test == 0)
 				{
-					printf("%s", separator);
+					printf("(nil)");
 				}
-			}
+				else
+				{
+					printf("%s", va_arg(hchar, char *));
+					if (i < (n - 1))
+					{
+						printf("%s", separator);
+					}
+				}
 		}
 	}
 	va_end(hchar);
