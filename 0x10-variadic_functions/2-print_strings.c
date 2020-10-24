@@ -18,10 +18,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	if (n != 0)
 	{
+		va_start(hchar, n);
 		if (separator != NULL)
 		{
-			va_start(hchar, n);
-			for (i = 0; i < n; i++)
+		        for (i = 0; i < n; i++)
 			{
 				va_copy(cp, hchar);
 				test = va_arg(cp, int);
