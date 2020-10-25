@@ -1,6 +1,12 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <variadic_functions.h>
+#include "variadic_functions.h"
+
+rebelion pld[] = {
+	{"c", pechar},
+	{"i", pinta},
+	{"f", fumeta},
+	{"s", sublingual},
+	{NULL, NULL}
+};
 
 /**
  * print_all - print any kind of data
@@ -10,14 +16,14 @@ void print_all(const char * const format, ...)
 {
 	char *cye = "";
 	va_list magicians;
-	int i;
-	int j;
+	int i = 0;
+	int j = 0;
 
 	va_start(magicians, format);
 
 	while (format && format[i])
 	{
-		while (pld[j] != '\0')
+		while (j < 4)
 		{
 			if (format[i] == pld[j].bomba[0])
 			{
@@ -27,6 +33,7 @@ void print_all(const char * const format, ...)
 			}
 			j++;
 		}
+		j = 0;
 		i++;
 	}
 	va_end(magicians);
@@ -67,11 +74,11 @@ void fumeta(char *cye, va_list magicians)
  */
 void sublingual(char *cye, va_list magicians)
 {
-	char *string = va_arg(magicians, char *)
+	char *string = va_arg(magicians, char *);
 
 	if (string == NULL)
 	{
 		string = ("(nil)");
 	}
-	printf("%s%s", cye, va_arg(magicians, string));
+	printf("%s%s", cye, string);
 }
