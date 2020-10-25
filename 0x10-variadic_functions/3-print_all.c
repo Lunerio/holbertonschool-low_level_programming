@@ -1,23 +1,24 @@
 #include "variadic_functions.h"
 
-rebelion pld[] = {
-	{"c", pechar},
-	{"i", pinta},
-	{"f", fumeta},
-	{"s", sublingual},
-	{NULL, NULL}
-};
-
 /**
  * print_all - print any kind of data
  * @format: chars that set the format
  */
+
 void print_all(const char * const format, ...)
 {
 	char *cye = "";
 	va_list magicians;
 	int i = 0;
 	int j = 0;
+
+	rebelion pld[] = {
+	{"c", pechar},
+	{"i", pinta},
+	{"f", fumeta},
+	{"s", sublingual},
+	{NULL, NULL}
+	};
 
 	va_start(magicians, format);
 
