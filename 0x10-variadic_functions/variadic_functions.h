@@ -14,6 +14,10 @@ void print_all(const char * const format, ...);
 typedef struct chanchullo
 {
 	char *bomba;
-	void(*funk)();
-}rebelion;
+	void (*funk)();
+} rebelion;
+void pechar(char *cye, va_list magicians);
+void pinta(char *cye, va_list magicians);
+void fumeta(char *cye, va_list magicians);
+void sublingual(char *cye, va_list magicians);
 #endif
