@@ -1,5 +1,12 @@
 #include "lists.h"
 
+/**
+ * add_node - add new node on the header
+ * @head: pointer to head position
+ * @str: string to add to the node
+ * Return: position of new node
+ */
+
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *newnode;
