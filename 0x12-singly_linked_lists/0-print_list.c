@@ -11,6 +11,11 @@ size_t print_list(const list_t *h)
 	list_t *save = malloc(sizeof(list_t));
 	unsigned int count = 0;
 
+	if (h == NULL)
+	{
+		return (0);
+	}
+
 	(*save).str = (*h).str;
 	(*save).len = (*h).len;
 	(*save).next = (*h).next;
