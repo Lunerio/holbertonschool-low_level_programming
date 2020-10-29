@@ -1,5 +1,11 @@
 #include "lists.h"
 
+/**
+ * print_list - Print elements from a linked list
+ * @h: pointer to the head element
+ * Return: Count of elements of linked list
+ */
+
 size_t print_list(const list_t *h)
 {
 	list_t *save = malloc(sizeof(list_t));
@@ -18,7 +24,7 @@ size_t print_list(const list_t *h)
 		}
 
 		printf("[%d] %s\n", (*save).len, (*save).str);
-	        save = (*save).next;
+		save = (*save).next;
 		count++;
 	}
 	return (count);
