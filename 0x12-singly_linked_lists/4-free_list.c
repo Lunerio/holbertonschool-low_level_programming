@@ -7,15 +7,9 @@
 
 void free_list(list_t *head)
 {
-	list_t *new = malloc(sizeof(list_t));
-
-	new = head;
-
-	if ((*new).next != NULL)
+	while (head)
 	{
-
-		free_list((*new).next);
+		free(head);
+		head = (*head).next;
 	}
-
-	free(head);
 }
