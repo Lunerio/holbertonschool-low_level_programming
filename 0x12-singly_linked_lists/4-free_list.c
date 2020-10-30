@@ -7,9 +7,12 @@
 
 void free_list(list_t *head)
 {
+	list_t *save;
+
 	while (head)
 	{
+		save = head;
 		head = (*head).next;
-		free(head);
+		free(save);
 	}
 }
