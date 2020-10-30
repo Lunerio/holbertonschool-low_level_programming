@@ -9,7 +9,7 @@ void free_list(list_t *head)
 {
 	list_t *save;
 
-	while (head)
+	while (head != NULL)
 	{
 		save = head;
 		head = (*head).next;
