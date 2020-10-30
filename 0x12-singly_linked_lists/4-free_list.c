@@ -7,13 +7,9 @@
 
 void free_list(list_t *head)
 {
-	list_t *save;
-
-	while (save)
+	while (head)
 	{
-		save = head;
 	        head = (*head).next;
-		free((*save).str);
-		free(save);
+		free(head);
 	}
 }
