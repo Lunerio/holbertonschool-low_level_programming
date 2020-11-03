@@ -8,7 +8,6 @@
 
 size_t print_list(const list_t *h)
 {
-	list_t *save = malloc(sizeof(list_t));
 	unsigned int count = 0;
 
 	if (h == NULL)
@@ -16,20 +15,16 @@ size_t print_list(const list_t *h)
 		return (0);
 	}
 
-	(*save).str = (*h).str;
-	(*save).len = (*h).len;
-	(*save).next = (*h).next;
-
-	while (save)
+	while (h)
 	{
-		if ((*save).str == NULL)
+		if ((*h).str == NULL)
 		{
-			(*save).str = "(nil)";
-			(*save).len = 0;
+			(*h).str = "(nil)";
+			(*h).len = 0;
 		}
 
-		printf("[%d] %s\n", (*save).len, (*save).str);
-		save = (*save).next;
+		printf("[%d] %s\n", (*h).len, (*h).str);
+		h = (*h).next;
 		count++;
 	}
 	return (count);
