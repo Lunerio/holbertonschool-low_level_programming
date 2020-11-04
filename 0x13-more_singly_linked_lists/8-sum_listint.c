@@ -1,5 +1,11 @@
 #include "lists.h"
 
+/**
+ * sum_listint - sum each int from each node
+ * @head: pointer to head node
+ * Return: sum of nodes ints
+ */
+
 int sum_listint(listint_t *head)
 {
 	int sum = 0;
