@@ -8,7 +8,7 @@
 
 size_t listint_len(const listint_t *h)
 {
-	unsigned int c = 1;
+	unsigned int c = 0;
 
 	if (h == NULL)
 	{
@@ -16,8 +16,8 @@ size_t listint_len(const listint_t *h)
 	}
 	if (h)
 	{
-		listint_len(h->next);
+		c++;
 	}
-	c++;
+	c += listint_len(h->next)
 	return (c);
 }

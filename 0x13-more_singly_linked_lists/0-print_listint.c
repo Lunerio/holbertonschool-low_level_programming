@@ -8,18 +8,18 @@
 
 size_t print_listint(const listint_t *h)
 {
-	unsigned int c = 1;
+	unsigned int c = 0;
 
-	if (!h)
+	if (h == NULL)
 	{
 		return (0);
 	}
-
-	if (h)
+	else
 	{
 		printf("%d\n", h->n);
 		c++;
 	}
-	print_listint(h->next);
+
+	c += print_listint(h->next);
 	return (c);
 }
