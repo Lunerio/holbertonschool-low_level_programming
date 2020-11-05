@@ -8,7 +8,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int len;
+	int len;
 	unsigned int i;
 	int array[1024];
 	unsigned int sum = 0;
