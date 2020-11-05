@@ -9,7 +9,7 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned long int len;
-	int i;
+	unsigned long int i;
 	int array[1024];
 	unsigned long int sum = 0;
 
@@ -31,13 +31,11 @@ unsigned int binary_to_uint(const char *b)
 	for (i = 0; i <= len; i++)
 	{
 		array[i + 1] = ((array[i]) * 2);
-		printf("%d ", array[i]);
-
 	}
 
 	i = 0;
 
-	while (len >= 0)
+	while (len > 0)
 	{
 		if (b[len] == '1')
 		{
