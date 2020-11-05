@@ -28,7 +28,7 @@ unsigned int binary_to_uint(const char *b)
 
 	array[0] = 1;
 
-	for (i = 0; i < len; i++)
+	for (i = 0; i <= len; i++)
 	{
 		array[i + 1] = ((array[i]) * 2);
 	}
