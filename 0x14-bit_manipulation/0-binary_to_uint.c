@@ -10,7 +10,7 @@ unsigned int binary_to_uint(const char *b)
 {
 	int len;
 	int i;
-	int array[1024];
+	int array[INT_MAX];
 	unsigned long int sum = 0;
 
 	if (b == NULL)
@@ -31,6 +31,8 @@ unsigned int binary_to_uint(const char *b)
 	for (i = 0; i <= len; i++)
 	{
 		array[i + 1] = ((array[i]) * 2);
+		printf("%d ", array[i]);
+
 	}
 
 	i = 0;
