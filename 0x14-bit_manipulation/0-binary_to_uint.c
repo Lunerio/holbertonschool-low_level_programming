@@ -11,7 +11,7 @@ unsigned int binary_to_uint(const char *b)
 	int len;
 	int i;
 	int array[1024];
-	unsigned int sum = 0;
+	int sum = 0;
 
 	if (b == NULL)
 	{
