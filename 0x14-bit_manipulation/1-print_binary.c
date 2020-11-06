@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * print_binary - transform an int into binary
+ * @n: int given to transform
+ */
+
 void print_binary(unsigned long int n)
 {
 	long int i = 0;
