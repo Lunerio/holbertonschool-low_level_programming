@@ -4,7 +4,7 @@ void print_binary(unsigned long int n)
 {
 	unsigned int mask = 32768;
 
-	while(mask > 0)
+	while(mask > 1)
 	{
 		if((n & mask) == 0)
 		{

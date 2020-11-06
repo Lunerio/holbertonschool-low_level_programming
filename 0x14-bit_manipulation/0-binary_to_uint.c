@@ -8,42 +8,29 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int len;
-	int i;
-	int array[1024];
-	int sum = 0;
+	unsigned int i;
+	unsigned int n = 0;
 
-	if (b == NULL)
+	if (b == 0)
 	{
 		return (0);
 	}
 
-	for (len = 0; b[len] != '\0'; len++)
+	for (i = 0; b[i] != '\0'; i++)
 	{
-		if (b[len] != '1' && b[len] != '0')
+		if (b[i] == '1' || b[i] == '0')
+		{
+			n = n << 1;
+			if (b[i] == '1')
+			{
+				n += 1;
+			}
+		}
+		else
 		{
 			return (0);
 		}
-	}
+        }
 
-	array[0] = 1;
-
-	for (i = 0; i <= len; i++)
-	{
-		array[i + 1] = ((array[i]) * 2);
-	}
-
-	i = 0;
-
-	while (len >= 0)
-	{
-		if (b[len] == '1')
-		{
-			sum += array[i];
-		}
-		i++;
-		len--;
-	}
-
-	return (sum / 2);
+	return (n);
 }
