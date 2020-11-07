@@ -1,15 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * times_table - print the mult table from 0 to 9
  */
-int main(void)
-{
-	times_table();
-	return (0);
-}
 
 void times_table(void)
 {
@@ -21,17 +14,17 @@ void times_table(void)
 	{
 		for (num_m = 0; num_m <= 9; num_m++)
 		{
-			res = num_t * num_m;
+			res = (num_t)*(num_m);
 			if (res > 9)
 			{
 				_putchar((res / 10) + '0');
-				_putchar((res %10) + '0');
+				_putchar((res % 10) + '0');
 			}
 			else
 			{
 				_putchar(' ');
 				_putchar(res + '0');
-		        }
+			}
 			if (num_m < 9)
 			{
 				_putchar(',');
