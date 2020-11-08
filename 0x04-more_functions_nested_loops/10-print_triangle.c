@@ -1,24 +1,14 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_triangle - Print a triangle with given size
+ * @size: height of triangle
  */
-int main(void)
-{
-	print_triangle(2);
-	print_triangle(10);
-	print_triangle(1);
-	print_triangle(0);
-	return (0);
-}
 
 void print_triangle(int size)
 {
-
 	int lin;
-	int esp;
+	int sym;
 
 	if (size <= 0)
 	{
@@ -26,5 +16,18 @@ void print_triangle(int size)
 	}
 	else
 	{
-
+		for (lin = size; lin > 0; lin--)
+		{
+			for (sym = 0; sym < (lin - 1); sym++)
+			{
+				_putchar(' ');
+			}
+			while (sym < size)
+			{
+				_putchar('#');
+				sym++;
+			}
+			_putchar('\n');
+		}
+	}
 }
