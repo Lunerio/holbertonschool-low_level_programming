@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ * read_textfile - read file given in arguments
+ * @filename: received file name
+ * letters: ammount of letters to read
+ * Return: count of letters written
+ */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file;
