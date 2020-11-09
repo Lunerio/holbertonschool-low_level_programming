@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * create_file - Create new file. If already exist truncate it
+ * append_text_to_file - Create new file. If already exist truncate it
  * @filename: name of file given
  * @text_content: content to add to the file at the end
  * Return: 1 in case of success. -1 in case of error.
