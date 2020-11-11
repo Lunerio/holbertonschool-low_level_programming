@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 		}
 		if (fdread > 0)
 		{
-			fdwrite = write(fd2, buf, fd1);
+			fdwrite = write(fd2, buf, fdread);
 			if (fdwrite == -1)
 			{
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
