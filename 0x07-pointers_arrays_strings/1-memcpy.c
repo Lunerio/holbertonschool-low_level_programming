@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * memcpy - prints buffer in hexa
+ * _memcpy - prints buffer in hexa
  * @dest: the address of memory to print
  * @src: the size of the memory to print
  * @n: unsigned int
