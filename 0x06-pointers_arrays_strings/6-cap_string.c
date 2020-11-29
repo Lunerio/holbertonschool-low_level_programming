@@ -1,7 +1,11 @@
 #include "holberton.h"
 #include <stdio.h>
 
-int c_check(char s_index);
+/**
+ * cap_string - capitalizes every word
+ * @s: string to capitalize
+ * Return: pointer to the string capitalized
+ */
 
 char *cap_string(char *s)
 {
