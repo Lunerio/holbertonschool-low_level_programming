@@ -2,21 +2,25 @@
 #include <stdio.h>
 
 /**
- * _strstr - check the code for Holberton School students.
- * @haystack: something
- * @needle: something
- * Return: Always 0.
+ * _strstr - looks for first occurrence of substring.
+ * @haystack: original string.
+ * @needle: substring to find.
+ * Return: pointer to the first occurrence. NULL if not found.
  */
 
 char *_strstr(char *haystack, char *needle)
 {
 	int i;
-	int j;
 
-	for (i = 0; needle[i] != '\0'; i++)
+	for (; haystack[i] != '\0'; haystack++) /*loop to move pointer*/
 	{
-		for (j = 0; haystack[j] != '\0'; j++)
-		{
+		for (i = 0; haystack[i] == needle[i]; i++)
+		{/*loop to get to end of needle while same as haystack*/
 		}
-
+		if (needle[i] == '\0')
+		{
+			return (haystack);
+		}
+	}
+	return (NULL);
 }
