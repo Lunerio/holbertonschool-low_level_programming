@@ -2,19 +2,18 @@
 #include <stdio.h>
 
 /**
- * print_diagsums - check the code for Holberton School students.
- * @a: something
- * @size: something
- * Return: Always 0.
+ * print_diagsums - print result of sum of diagonals
+ * @a: array of numbers
+ * @size: size of square matrix
  */
 
 void print_diagsums(int *a, int size)
 {
 	int i;
 	int index = 0;
-	int res1 = 0;
+	int res1 = a[0];
 	int res2;
-	int sig;
+	int sig = 0;
 	int sig2;
 
 	for (i = 0; i < (size - 1); i++)
