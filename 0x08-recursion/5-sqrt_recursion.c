@@ -13,7 +13,7 @@ int rec_int(int n, int i)
 		return (-1);
 	if (i * i == n)
 		return (i);
-	rec_int(n, i + 1);
+	return (rec_int(n, i + 1));
 }
 
 /**
@@ -26,6 +26,5 @@ int _sqrt_recursion(int n)
 {
 	if (n <= 0)
 		return (-1);
-
-	return(rec_int(n, 1));
+	return (rec_int(n, 1));
 }
