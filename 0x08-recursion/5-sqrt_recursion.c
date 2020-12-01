@@ -20,6 +20,7 @@ int rec_int(int n, int i)
  * _sqrt_recursion - get's the return from the rec_int function
  * @n: number to get the square root
  * Return: from the rec_int function
+ */
 
 int _sqrt_recursion(int n)
 {
