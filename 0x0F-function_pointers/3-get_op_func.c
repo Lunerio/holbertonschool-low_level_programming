@@ -3,7 +3,7 @@
 /**
  * get_op_func - executes correct function
  * @s: operator
- * Return : result or NULL if incorrect operator
+ * Return: result or NULL if incorrect operator
  */
 
 int (*get_op_func(char *s))(int, int)
@@ -16,8 +16,9 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i = 0;
+	int i;
 
+	i = 0;
 	while (ops[i].op != NULL)
 	{
 		if (strcmp(ops[i].op, s) == 0)
@@ -26,6 +27,5 @@ int (*get_op_func(char *s))(int, int)
 		}
 		i++;
 	}
-	printf("error func pointer\n");
-	return (NULL);
+        return (NULL);
 }

@@ -18,13 +18,13 @@ int main(int ac, char **av)
 		printf("Error\n");
 		exit(98);
 	}
+	a = atoi(av[1]);
+	b = atoi(av[3]);
 	if (get_op_func(av[2])(a, b) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	a = atoi(av[1]);
-	b = atoi(av[3]);
 	ret = get_op_func(av[2])(a, b);
 	printf("%d\n", ret);
 
