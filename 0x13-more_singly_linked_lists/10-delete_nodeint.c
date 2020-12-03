@@ -1,5 +1,12 @@
 #include "lists.h"
 
+/**
+ * delete_nodeint_at_index - delete node at given index
+ * @head: pointer to head node
+ * @index: index to delete
+ * Return: 1 on success, -1 on error
+ */
+
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *p_index = *head;
@@ -18,7 +25,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		free(p_index);
 		return (1);
 	}
-	for (i = 0; (i < (index - 1)) && (p_prev->next != NULL); i++) /*move the pointer to index - 1*/
+	for (i = 0; (i < (index - 1)) && (p_prev->next != NULL); i++)
 	{
 		p_prev = p_prev->next;
 	}
@@ -27,7 +34,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (-1);
 	}
 
-	for (i = 0; (i < index) && (p_index != NULL); i++) /*move pointer to index*/
+	for (i = 0; (i < index) && (p_index != NULL); i++)
 	{
 		p_index = p_index->next;
 	}
