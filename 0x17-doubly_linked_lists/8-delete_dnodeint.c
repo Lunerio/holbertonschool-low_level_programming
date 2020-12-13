@@ -33,12 +33,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	}
 	for (i = 0; i < index; i++)
 	{
-		if (current->next == NULL)
+		if (current->next  == NULL)
 		{
-			prev_node = current->prev;
-			prev_node->next = NULL;
-			free(current);
-			return (1);
+			return (-1);
 		}
 		current = current->next;
 	}
