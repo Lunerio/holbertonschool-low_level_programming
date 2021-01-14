@@ -21,6 +21,15 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	new_key = (unsigned char*)key;
 	size = ht->size;
 	index = key_index(new_key, size);
+	if (ht->array[index]->key == key)
+		return (ht->array[index]->value);
 
-	return (key_value);
+	while (ht->array[index]->next != NULL)
+	{
+		if (ht->array[index]->key == key)
+			return (ht->array[index]->value);
+
+		ht->array[index] = ht->array[index]->next;
+	}
+	return (NULL);
 }
