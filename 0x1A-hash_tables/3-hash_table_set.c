@@ -28,20 +28,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (newnode == NULL)
 		return (0);
 
-	new_key = (unsigned char*)key;
+	new_key = (unsigned char *)key;
 	new_value = strdup(value);
 	size = ht->size;
 	index = key_index(new_key, size);
 
 	if (ht->array[index] != NULL)
 	{
-		newnode->key = (char*)new_key;
+		newnode->key = (char *)new_key;
 		newnode->value = new_value;
 		newnode->next = ht->array[index];
 	}
 	else
 	{
-		newnode->key = (char*)new_key;
+		newnode->key = (char *)new_key;
 		newnode->value = new_value;
 		newnode->next = NULL;
 	}
