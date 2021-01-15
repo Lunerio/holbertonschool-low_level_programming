@@ -29,7 +29,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	if (newnode == NULL)
 		return (0);
 
-	new_key = strdup((unsigned char *)key);
+	new_key = (unsigned char *)strdup(key);
 	new_value = strdup(value);
 	size = ht->size;
 	index = key_index(new_key, size);
