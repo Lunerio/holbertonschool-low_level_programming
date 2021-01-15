@@ -1,5 +1,11 @@
 #include "hash_tables.h"
 
+/**
+ * hash_djb2 - function to get a hash number from a character
+ * @str: string to analyze
+ * Return: hash number
+ */
+
 unsigned long int hash_djb2(const unsigned char *str)
 {
 	unsigned long int hash;
