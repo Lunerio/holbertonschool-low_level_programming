@@ -1,4 +1,4 @@
-#Makefile with more variables
+#Makefile with more variables and rules
 #CC is the compiler
 #SRC are the .c files
 #OBJ are the .o files
@@ -12,7 +12,11 @@ all : $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) *~
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
+
+fclean:	clean oclean
+
+re: oclean all
