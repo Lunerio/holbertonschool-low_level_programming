@@ -1,0 +1,12 @@
+#Makefile with more variables
+#CC is the compiler
+#SRC are the .c files
+#OBJ are the .o files
+#NAME is the executable name
+CC=gcc
+SRC=holberton.c main.c
+OBJ=*.o
+NAME=holberton
+all : $(SRC)
+	$(CC) -c $(SRC)
+	$(CC) $(OBJ) -o $(NAME)
