@@ -1,0 +1,7 @@
+#Makefile for holberton executable with all the files
+#CC is the compiler to be used
+#SRC are the .c files
+CC=gcc
+SRC=holberton.c main.c
+all : $(SRC)
+	$(CC) $(SRC) -o holberton
