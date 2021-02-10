@@ -1,0 +1,3 @@
+#Makefile for holberton executable with all the files
+all : main.c holberton.c m.h
+	gcc main.c holberton.c -o holberton
