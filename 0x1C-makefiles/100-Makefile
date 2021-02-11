@@ -6,7 +6,7 @@
 #CFLAGS are the flags for the compiler
 CC=gcc
 SRC=holberton.c main.c
-OBJ=$(SRC:%.c=%.o)
+OBJ=$(SRC:.c=.o)
 NAME=holberton
 CFLAGS=-Wall -Wextra -Werror -pedantic
 
@@ -19,7 +19,7 @@ clean:
 	$(RM) -f *~ $(NAME)
 
 oclean:
-	$(RM) -f $(OBJ)
+	$(RM) $(OBJ)
 
 fclean:	clean oclean
 
