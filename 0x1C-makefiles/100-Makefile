@@ -12,11 +12,11 @@ CFLAGS=-Wall -Wextra -Werror -pedantic
 
 .PHONY: all clean oclean fclean re
 
-all : $(OBJ) m.h
+all : m.h $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) -f *~ $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
