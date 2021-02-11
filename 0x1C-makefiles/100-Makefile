@@ -1,0 +1,30 @@
+#Makefile with more variables and rules
+#CC is the compiler
+#SRC are the .c files
+#OBJ are the .o files
+#NAME is the executable name
+#CFLAGS are the flags for the compiler
+CC=gcc
+SRC=holberton.c main.c
+OBJ=$(SRC:.c=.o)
+NAME=holberton
+RM=rm -f
+CFLAGS=-Wall -Wextra -Werror -pedantic
+
+.PHONY: all
+all : $(OBJ) m.h
+	$(CC) $(OBJ) -o $(NAME)
+
+.PHONY: clean
+clean:
+	$(RM) *~ $(NAME)
+
+.PHONY: oclean
+oclean:
+	$(RM) $(OBJ)
+
+.PHONY: fclean
+fclean:	clean oclean
+
+.PHONY: re
+re: oclean all

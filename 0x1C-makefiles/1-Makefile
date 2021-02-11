@@ -3,5 +3,5 @@
 #SRC are the .c files
 CC=gcc
 SRC=holberton.c main.c
-all : $(SRC)
+all : $(SRC) m.h
 	$(CC) $(SRC) -o holberton
