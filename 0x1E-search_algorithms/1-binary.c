@@ -9,7 +9,6 @@
 
 int binary_search(int *array, size_t size, int value)
 {
-    int lo = *array;
     int mid = size / 2;
 
     if (array == NULL)
@@ -18,11 +17,12 @@ int binary_search(int *array, size_t size, int value)
     if (value == array[mid])
         return (mid);
 
+
     if (value > array[mid])
         return (binary_search(&array[mid], mid, value));
 
     if (value < array[mid])
-        return (binary_search(&array[lo], mid, value));
+        return (binary_search(array, mid, value));
 
     return (-1);
 }
