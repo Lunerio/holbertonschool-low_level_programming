@@ -23,8 +23,8 @@ int jump_search(int *array, size_t size, int value)
 		if (array[step] == value)
 			return (step);
 		step += sqrt(size);
-        if (step >= size)
-            break;
+		if (step >= size)
+			break;
 	}
 
 	next_step = step;
