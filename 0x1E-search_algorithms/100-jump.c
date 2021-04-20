@@ -28,11 +28,13 @@ int jump_search(int *array, size_t size, int value)
 	}
 
 	next_step = step;
-	step = step - sqrt(size);
+	step = step - (int)sqrt(size);
 	printf("Value found between indexes [%d] and [%d]\n", step, next_step);
-	while (array[step] <= value)
+
+	while (array[step] <= value && step < (int)size)
 	{
 		printf("Value checked array[%d] = [%d]\n", step, array[step]);
+
 		if (array[step] == value)
 			return (step);
 		step += 1;
