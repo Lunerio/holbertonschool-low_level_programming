@@ -5,31 +5,32 @@
  * @array: array to search
  * @size: size of array
  * @value: value to search for
+ * Return: -1 if not found or index of value
  */
 
 int binary_search(int *array, size_t size, int value)
 {
-    int lo = 0;
-    int hi = size - 1;
-    int mid;
-    int i;
+	int lo = 0;
+	int hi = size - 1;
+	int mid;
+	int i;
 
-    while (lo <= hi)
-    {
-        printf("Searching in array: ");
-        for (i = lo; i < hi; i++)
-            printf("%d, ", array[i]);
-        printf("%d\n", array[i]);
+	while (lo <= hi)
+	{
+		printf("Searching in array: ");
+		for (i = lo; i < hi; i++)
+		printf("%d, ", array[i]);
+		printf("%d\n", array[i]);
 
-        mid = lo + (hi - lo) / 2;
-        if (array[mid] == value)
-            return mid;
+		mid = lo + (hi - lo) / 2;
+		if (array[mid] == value)
+			return (mid);
 
-        if (value > array[mid])
-            lo = mid + 1;
-        else
-            hi = mid - 1;
-    }
+		if (value > array[mid])
+			lo = mid + 1;
+		else
+			hi = mid - 1;
+	}
 
-    return (-1);
+	return (-1);
 }
