@@ -11,13 +11,14 @@
 
 int main(int argc, char **argv)
 {
-		
+
 	int coins[5] = {25, 10, 5, 2, 1};
 	int sum = 0;
 	int money;
 	int i;
 
-	if (argc != 2) {
+	if (argc != 2)
+	{
 		printf("Error\n");
 		return (1);
 	}
