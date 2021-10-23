@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 
+/**
+ * main - tests function that prints if integer is positive or negative
+ * @argc: argument counter
+ * @argv: argument array
+ * Return: count of coins
+ */
+
 int main(int argc, char **argv) {
     
     int coins[5] = {25, 10, 5, 2, 1};
