@@ -18,14 +18,13 @@ int main(int argc, char **argv) {
 
     for (; money > 0;) {
         for (i = 0; i < 5; i++) {
-            if (money % coins[i] == 0) {
+            if (money - coins[i] > 0 || money % coins[i] == 0) {
                 sum++;
                 money -= coins[i];
                 break;
             }
         }
     }
-
     printf("%d\n", sum);
     return (0);
 }
