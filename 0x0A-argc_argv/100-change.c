@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 
 	money = atoi(argv[1]);
 
-	for (; money > 0;)
+	while (money > 0)
 	{
 		for (i = 0; i < 5; i++)
 		{
